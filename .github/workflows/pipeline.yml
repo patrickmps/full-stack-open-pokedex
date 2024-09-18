@@ -25,6 +25,3 @@ jobs:
 
       - name: Run tests
         run: npm run test
-
-      - name: Post run actions/checkout
-        uses: actions/checkout@v4
