@@ -81,7 +81,7 @@ footer {
   border: solid 2px red;
   transition: all 0.3s;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .links>a:visited {
