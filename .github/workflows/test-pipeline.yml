@@ -1,12 +1,9 @@
-name: Deployment pipeline
+name: Tests pipeline
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize]
 
 jobs:
   run-tests:
@@ -35,10 +32,3 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
-
-  deploy:
-    runs-on: ubuntu-20.04
-    if: ${{github.event_name == 'push' && github.ref == 'refs/heads/main'}}
-    steps:
-      - name: Trigger deployment
-        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }} -X POST
