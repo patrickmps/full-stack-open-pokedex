@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700');
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -12,7 +13,7 @@ body {
   font-size: 18px;
 }
 
-body > div {
+body>div {
   flex: 1 0 auto;
 }
 
@@ -27,10 +28,12 @@ footer {
   margin: 120px;
   width: 80px;
 }
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -67,6 +70,33 @@ footer {
   margin-bottom: 10px;
   text-decoration: none;
   width: 332px;
+}
+
+.links>a {
+  text-decoration: none;
+  color: red;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: solid 2px red;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.links>a:visited {
+  color: #888;
+  border: solid 2px #888;
+}
+
+.links>a:hover {
+  background-color: red;
+  color: white;
+}
+
+.links>a:visited:hover {
+  background-color: #888;
+  color: white;
 }
 
 .pokemon-page {
