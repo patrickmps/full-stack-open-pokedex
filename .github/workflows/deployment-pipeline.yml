@@ -21,7 +21,7 @@ jobs:
   tag_release:
     needs: [deploy]
     runs-on: ubuntu-20.04
-    if: ${{github.event_name == 'push' && github.ref == 'refs/heads/main'}}
+    if: ${{github.event_name == 'push' && github.ref == 'refs/heads/main' && github.env.CONDITION == false}}
     permissions:
       contents: write
     steps:
