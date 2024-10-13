@@ -38,5 +38,5 @@ jobs:
         if: failure()
         with:
           severity: error
-          details: Commit ${{toJson(github.event.commits.id)}} broke the tests! by ${{github.actor}}
+          details: "Commit ${{toJson(github.event.commits.id)}} broke the tests! by ${{github.actor}}"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
